@@ -1,0 +1,23 @@
+.body-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.sidebar-flex {
+    background-color: #31363f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 15px;
+    gap: 15px;
+}
+
+#sidebar-header {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#sidebar-settings {
+    margin-top: 30px;
+}

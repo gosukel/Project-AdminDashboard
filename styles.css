@@ -1,23 +1,134 @@
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
 .body-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    height: 100vh;
 }
 
 .sidebar-flex {
-    background-color: #31363f;
+    background-color: #37ade6;
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 15px;
+    height: 100%;
+    padding-left: 15px;
     gap: 15px;
+    position: relative;
+    z-index: 3;
 }
 
 #sidebar-header {
     font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
     margin-bottom: 30px;
+}
+
+.sidebar-item {
+    font-weight: bold;
 }
 
 #sidebar-settings {
     margin-top: 30px;
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-header {
+    flex-basis: 135px;
+    box-shadow: 0px 3px 2px #cdcece;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+}
+
+.main-header-top-bar {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search-bar {
+    height: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #d0dbe0;
+    /* flex: 1; */
+    flex-basis: 470px;
+    margin-right: 45px;
+}
+
+#profile-name-small {
+    margin-right: 45px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.main-header-bot-bar {
+    flex: 1;
+    display: grid;
+    grid-template: 1fr 1.5fr / 1fr 5fr 1fr 1fr 1fr;
+}
+
+#profile-pic-large {
+    grid-area: 1 / 1 / 3 / 2;
+    align-self: center;
+    justify-self: start;
+}
+
+#bot-bar-greeting {
+    align-self: end;
+    font-size: 0.63rem;
+    font-weight: bold;
+}
+
+#new-btn {
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+#upload-btn {
+    grid-area: 1 / 4 / 3 / 5;
+}
+
+#share-btn {
+    grid-area: 1 / 5 / 3 / 6;
+    margin-right: 20px;
+}
+
+#new-btn,
+#upload-btn,
+#share-btn {
+    align-self: center;
+    justify-self: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 15px;
+    background-color: #37ade6;
+    height: 30px;
+    padding: 0 15px;
+    color: white;
+}
+
+#profile-name-large {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.main-body-flex {
+    flex: 1;
+    background-color: #cfd9dd;
 }

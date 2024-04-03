@@ -4,18 +4,20 @@ body {
 
 .body-grid {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3.5fr;
     height: 100vh;
 }
 
-.sidebar-flex {
+.sidebar-grid {
     background-color: #37ade6;
     color: white;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 80px;
+    grid-auto-rows: 40px;
     height: 100%;
     padding-left: 15px;
-    gap: 15px;
+    gap: 5px;
     position: relative;
     z-index: 3;
 }
@@ -23,16 +25,56 @@ body {
 #sidebar-header {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 25px;
+}
+
+.logo-img {
+    width: 50px;
+    filter: invert(100%) sepia(1%) saturate(16%) hue-rotate(19deg)
+        brightness(105%) contrast(100%);
+    align-self: start;
+    justify-self: center;
     margin-top: 15px;
-    margin-bottom: 30px;
+}
+
+.sidebar-icon {
+    width: 20px;
+    filter: invert(100%) sepia(1%) saturate(16%) hue-rotate(19deg)
+        brightness(105%) contrast(100%);
+    align-self: center;
+    justify-self: center;
 }
 
 .sidebar-item {
     font-weight: bold;
+    align-self: center;
 }
 
-#sidebar-settings {
-    margin-top: 30px;
+#settings-icon {
+    grid-row-start: 9;
+}
+
+#settings {
+    grid-row-start: 9;
+    grid-column-start: 2;
+}
+
+#support-icon {
+    grid-row-start: 10;
+}
+
+#support {
+    grid-row-start: 10;
+    grid-column-start: 2;
+}
+
+#privacy-icon {
+    grid-row-start: 11;
+}
+
+#privacy {
+    grid-row-start: 11;
+    grid-column-start: 2;
 }
 
 .main-flex {
@@ -131,4 +173,15 @@ body {
 .main-body-flex {
     flex: 1;
     background-color: #cfd9dd;
+    display: flex;
+}
+
+.main-body-left {
+    flex: 1;
+    background-color: salmon;
+}
+
+.main-body-right {
+    flex-basis: 270px;
+    background-color: burlywood;
 }
